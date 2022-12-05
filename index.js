@@ -4,11 +4,12 @@ function cartClicked() {
    const elem = document.getElementsByClassName('cart');
    if (elem[0].classList.contains('cart-active')){
     elem[0].classList.toggle('cart-active');
+    elem[0].innerHTML = '<i class="fa fa-shopping-cart"></i> Add to Cart';
     alert('Item removed from cart!')
      }
      else{
-         elem[0].classList.toggle('cart-active');
-    alert('Successfully added item to cart, Happy shopping!')
+        elem[0].classList.toggle('cart-active');
+        elem[0].innerHTML = '<i class="fa fa-shopping-cart"></i> Added to Cart';
      }  
 }
 function wishlistClicked() {
@@ -19,6 +20,5 @@ function wishlistClicked() {
     }
     else{
         elem[0].classList.toggle('wishlist-active');
-   alert('Successfully added item to wishlist, keep exploring!')
     }   
  }
